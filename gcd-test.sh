@@ -29,7 +29,7 @@ echo "ERROR: PLZ INPUT 2 ARGMENTS" > ${ans}
 ./gcd.sh 20 > ${result}  && echo "error before diff in 2-1" >> ${err}
 diff ${ans} ${result} && echo "test 2-1 OK" || echo "error in2-1" >> ${err}
 
-#2-2 文字を入力してエラーが正しく出るか出るかチェック
+#2-2 文字を入力してエラーが正しく出るかチェック
 echo "ERROR: PLZ INPUT 2 FIGURES" > ${ans}
 ./gcd.sh 最大 公約数 > ${result}  && echo "error before diff in 2-2" >> ${err}
 diff ${ans} ${result} && echo "test 2-2 OK" || echo "error in2-2" >> ${err}
@@ -39,7 +39,7 @@ echo "ERROR: PLZ INPUT NATURAL NUMBER" > ${ans}
 ./gcd.sh 1 -1 > ${result}  && echo "error before diff in 2-3" >> ${err}
 diff ${ans} ${result} && echo "test 2-3 OK" ||  echo "error in2-3" >> ${err}
 
-
+#動作確認でエラーが起きた場合、そのエラー個所を通知。最後に後処理して終了。
 if [ -f ${err} ]; then 
 cat ${err} 
 rm /tmp/$$-* 
