@@ -1,0 +1,4 @@
+language: bash
+script:
+ - echo "gcd.shのテスト開始"
+ - ./gcd-test.sh
