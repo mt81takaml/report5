@@ -1,4 +1,4 @@
 language: bash
 script:
- - echo"gcd.sh test"
+ - echo "gcd.sh test"
  - ./gcd-test.sh
