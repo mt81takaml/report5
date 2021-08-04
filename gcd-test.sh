@@ -33,12 +33,12 @@ diff ${ans} ${result} && SUCCESS "test 1-2 OK" || ERROR_EXIT "error in 1-2"
 #2-1では、引数の数によって起きるエラーを想定する。
 #2-1(A) 入力を一つだけにしたときにエラーが正しく出るかチェック
 echo "ERROR: PLZ INPUT 2 ARGMENTS" > ${ans}
-./gcd.sh 20 > ${result}  && ERROR_EXIT "error before diff in 2-1" 
+./gcd.sh 20 > ${result}  && ERROR_EXIT "error before diff in 2-1(A)" 
 diff ${ans} ${result} && SUCCESS "test 2-1(A) OK" || ERROR_EXIT "error in 2-1(A)" 
 
 #2-1(B) 入力が10つあった場合に、エラーが正しく出るかチェック
 echo "ERROR: PLZ INPUT 2 ARGMENTS" > ${ans}
-./gcd.sh a b c d e f g h i j > ${result}  && ERROR_EXIT "error before diff in 2-1"
+./gcd.sh a b c d e f g h i j > ${result}  && ERROR_EXIT "error before diff in 2-1(B)"
 diff ${ans} ${result} && SUCCESS "test 2-1(B) OK" || ERROR_EXIT "error in 2-1(B)" 
 
 
@@ -60,7 +60,7 @@ echo "ERROR: PLZ INPUT TWO NATURAL NUMBERS SMALLER THAN 21 DIGITS" > ${ans}
 diff ${ans} ${result} && SUCCESS "test 2-2(C) OK" || ERROR_EXIT "error in 2-2(C)"
 
 #2-3 自然数以外の数字を入れたことによるエラーを想定する。
-#2-3 マイナスの値を入力して、エラーが正しく出るかチェック
+#マイナスの値を入力して、エラーが正しく出るかチェック
 echo "ERROR: PLZ INPUT NATURAL NUMBER" > ${ans}
-./gcd.sh 1 -1 > ${result}  && ERROR_EXIT "error before diff in 2-3(A)" 
+./gcd.sh 1 -1 > ${result}  && ERROR_EXIT "error before diff in 2-3" 
 diff ${ans} ${result} && SUCCESS "test 2-3 OK" || ERROR_EXIT "error in 2-3 OK"
